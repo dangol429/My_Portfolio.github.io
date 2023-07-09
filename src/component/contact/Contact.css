@@ -1,0 +1,72 @@
+.contact_container {
+    width:58%;
+    display: grid;
+    grid-template-columns: 30% 58%;
+    gap:12%;
+}
+
+.app_box{
+    display: grid;
+    grid-template-rows : repeat(3,1fr) ;
+    margin-bottom: 2rem;
+}
+.app_box{
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.app_box:hover{
+    background:transparent;
+    cursor: default;
+    border-color: var(--color-primary-variant);
+}
+
+.icons {
+    font-size: 1.3rem;
+}
+.app_box h3{
+    font-size: 1.1rem;
+}
+.app_box small{
+    font-size: 0.8rem;
+    color: var(--color-light)
+}
+form{
+    display:flex;
+    flex-direction: column;
+    gap:1.2rem;
+}
+input , textarea{
+    border: 2px solid var(--color-primary-variant);
+    background: transparent;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    width:100%;
+    resize: none;
+}
+.form button {
+    padding:1rem;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES)  ========== */
+@media screen and (max-width: 1024px) {
+    .container.contact_container{
+        grid-template-columns: 1fr;
+    }
+    
+}
+ /* ================ MEDIA QUERIES (SMALL DEVICES)  ========== */
+ @media screen and (max-width: 600px) {
+    .container.contact_container{
+        grid-template-columns: 1fr;
+        width: var(--container-width-sm);
+        margin-bottom: 2rem;
+    }
+
+ }

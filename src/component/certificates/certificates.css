@@ -1,0 +1,72 @@
+.certificates_container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.certificate_image{
+    border:2px solid var(--color-bg);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.certificates_container img{
+    width: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+    border-radius: 2rem;
+}
+.certificate_image:hover img{
+    transform : scale(1.1)
+}
+
+.popup_image{
+    position: fixed;
+    top:0; left:0;
+    background: rgba(0,0,0,0.9);
+    height: 100%;
+    width:100%;
+    z-index:100;
+    display: none;
+}
+ 
+.popup_image span{
+    position: absolute;
+    top:0; right:10px;
+    font-size: 60px;
+    font-weight:bolder;
+    color: white;
+    cursor: pointer;
+}
+
+.popup_image img {
+    position: absolute;
+    top: 50%; left:50%;
+    transform: translate(-50%,-50%);
+    border: 5px solid white;
+    border-radius: 5px;
+    width: 50rem;
+    object-fit: cover;
+}
+.certificate_info h2{
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+.certificate_info span {
+    color: var(--color-light);
+    font-size: 0.9rem;
+}
+.certificate_info p{
+    text-align: center;
+}
+/* ================ MEDIA QUERIES (MEDIUM DEVICES)  ========== */
+@media screen and (max-width: 1024px) {
+}
+ /* ================ MEDIA QUERIES (SMALL DEVICES)  ========== */
+ @media screen and (max-width: 600px) {
+    .certificates_container{
+        flex-direction: column;
+    }
+}
